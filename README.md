@@ -14,7 +14,7 @@
 - has_many :schedules
 
 
-## Garbages テーブル
+## garbages テーブル
 
 | Colum           | type      | Options     |
 | --------------  | ------    | ----------- |
