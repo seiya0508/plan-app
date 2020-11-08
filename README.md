@@ -18,8 +18,8 @@
 
 | Colum           | type      | Options     |
 | --------------  | ------    | ----------- |
-| day_id          | integer   |             |
-| type_id         | string    |             |
+| day             | date      |             |
+| category        | string    |             |
 | other           | string    |             |
 
 
