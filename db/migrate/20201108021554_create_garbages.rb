@@ -4,7 +4,7 @@ class CreateGarbages < ActiveRecord::Migration[6.0]
       t.date :day
       t.string :category
       t.string :other
-      t.string :dom
+      t.string :dow
       t.timestamps
     end
   end

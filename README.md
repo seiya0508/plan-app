@@ -19,6 +19,7 @@
 | Colum           | type      | Options     |
 | --------------  | ------    | ----------- |
 | day             | date      |             |
+| dow             | string    |             |
 | category        | string    |             |
 | other           | string    |             |
 
