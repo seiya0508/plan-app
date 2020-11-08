@@ -1,1 +1,30 @@
 <h1>スケジュール新規登録</h1>
+<%= form_with(model: @garbages, local: true) do |f| %>
+    <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
+
+    <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>    
+予定日を入力してください
+<div>
+<input type="date" name="birthday">
+</div>
+曜日を入力してください
+<div>
+ <%= f.select :faculty, [["月曜日", "月曜日"], ["", ""], ["", ""], ["", ""]], include_blank: "選択して下さい" %>
+ </div>
+ゴミの種類を選択してください
+<div>
+ <%= f.select :faculty, [["可燃ごみ", "可燃ゴミ"], ["", ""], ["", ""], ["", ""]], include_blank: "選択して下さい" %>
+<div>
+お知らせ通知時間
+<div>
+<input type="time" name="example">
+</div>
+<input type="submit" value="新規登録する">
+</div>       
+
+<div>
+<%= link_to root_path do %>
+  <button>戻る</button>
+<% end %>
+</div>
+<% end %>
