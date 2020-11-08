@@ -3,10 +3,9 @@
   display: flex;
   flex-wrap: wrap;
 }
-/*仮*/
+  /*
 .input-birth-wrap>select {
   width: 150px;
-  /*
   margin-top: 5px;
   height: 45px;
   padding-left: 10px;

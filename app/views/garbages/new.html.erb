@@ -1,5 +1,5 @@
 <h1>スケジュール新規登録</h1>
-<%= form_with(model: @garbages, local: true) do |f| %>
+<%= form_with(model: @garbage, local: true) do |f| %>
     <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
 
     <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>    
@@ -9,11 +9,11 @@
     <div class='input-birth-wrap'> 
       <%= raw sprintf(
                   f.date_select(
-                    :birthday,
+                    :day,
                     class:'select-day',
                     id:"birth-date",#DB保存
                     use_month_numbers: true,
-                    prompt:"選択して下さい",
+                    prompt:"--",
                     start_year: (Time.now.year),
                     end_year: (Time.now.year + 5),
                     date_separator: '%s'),
@@ -22,17 +22,18 @@
 </div>
 曜日を入力してください
 <div>
- <%= f.select :faculty, [["月曜日", "月曜日"], ["", ""], ["", ""], ["", ""]], include_blank: "選択して下さい" %>
+ <%= f.select :dow, [["月曜", "月曜"], ["火曜", "火曜"], ["水曜", "水曜"], ["木曜", "木曜"],["金曜", "金曜"], ["土曜", "土曜"], ["日曜", "日曜"]], include_blank: "--" %>
  </div>
 ゴミの種類を入力してください
 <div>
- <%= f.select :faculty, [["可燃ごみ", "可燃ゴミ"], ["", ""], ["", ""], ["", ""]], include_blank: "選択して下さい" %>
-<div>
-お知らせ通知時間
-<div>
-<input type="time" name="example">
+ <%= f.select :category, [["可燃ごみ", "可燃ごみ"], ["", ""], ["", ""], ["", ""]], include_blank: "--" %>
 </div>
-<input type="submit" value="新規登録する">
+その他
+<div>
+<%= f.text_area :other, placeholder: "その他入力"%>
+</div>
+<div>
+<%= f.submit "新規登録する" %>
 </div>       
 
 <div>
