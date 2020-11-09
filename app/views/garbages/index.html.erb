@@ -13,12 +13,14 @@
 <div>
 <%= current_user.nick_name + "さんのスケジュール" %>
 <% @garbage.each do |garbage| %>
-</div>
+<div>
 <%= garbage.day %>
 </div>
 <%= garbage.dow %>
 <div>
 <%= garbage.category %>
+<div>
+<%= garbage.other %>
 </div>
 <% end %>
 
