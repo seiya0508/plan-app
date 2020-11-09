@@ -23,9 +23,14 @@ class GarbagesController < ApplicationController
     redirect_to root_path
   end
   
+  def destroy
+    @garbage = Garbage.find(params[:id])
+    @garbage.destroy
+    redirect_to root_path
+  end
 
   private
   def garbage_params
-    params.require(:garbage).permit(:day, :dow, :category, :other)
+    params.require(:garbage).permit(:day, :dow, :category, :other, :name)
   end
 end

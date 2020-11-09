@@ -5,6 +5,7 @@ class CreateGarbages < ActiveRecord::Migration[6.0]
       t.string :category
       t.string :other
       t.string :dow
+      t.string :name
       t.timestamps
     end
   end

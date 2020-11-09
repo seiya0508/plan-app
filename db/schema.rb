@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2020_11_08_021554) do
     t.string "category"
     t.string "other"
     t.string "dow"
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
