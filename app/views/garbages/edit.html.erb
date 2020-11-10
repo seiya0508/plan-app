@@ -1,0 +1,10 @@
+<h1>editページ</h1>
+
+<%= render partial: "form", locals: { garbage: @garbage } %>
+<div>
+<%= link_to "削除", garbage_path(@garbage.id), method: :delete, data: { confirm: '削除しますか？' } %>
+
+</div>
+<%= link_to root_path do %>
+  <button>戻る</button>
+<% end %>

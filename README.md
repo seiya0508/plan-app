@@ -18,8 +18,9 @@
 
 | Colum           | type      | Options     |
 | --------------  | ------    | ----------- |
-| day_id          | integer   |             |
-| type_id         | string    |             |
+| day             | date      |             |
+| dow             | string    |             |
+| category        | string    |             |
 | other           | string    |             |
 
 
