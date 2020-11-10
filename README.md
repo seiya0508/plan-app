@@ -22,7 +22,7 @@
 | dow             | string    |             |
 | category        | string    |             |
 | other           | string    |             |
-
+| name            | string    | null: false |
 
 ### Association
 
