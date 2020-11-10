@@ -1,6 +1,6 @@
 <%= form_with(model: @garbage, local: true) do |f| %>
     <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
-
+     <%= render 'layouts/error_messages', model: f.object %>
     <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
     予定名
     <div>
