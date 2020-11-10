@@ -40,4 +40,5 @@ end
   def garbage_params
     params.require(:garbage).permit(:day, :dow, :category, :other, :name)
   end
+
 end
