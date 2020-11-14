@@ -1,4 +1,5 @@
-<h1>スケジュール新規登録</h1>
+
+<h1>新規登録ページ</h1>
 <%= form_with(model: @garbage, local: true) do |f| %>
     <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
      <%= render 'layouts/error_messages', model: f.object %>
@@ -11,17 +12,7 @@
 <div>
     </div>
     <div class='input-birth-wrap'> 
-      <%= raw sprintf(
-                  f.date_select(
-                    :day,
-                    class:'select-day',
-                    id:"birth-date",#DB保存
-                    use_month_numbers: true,
-                    prompt:"--",
-                    start_year: (Time.now.year),
-                    end_year: (Time.now.year + 5),
-                    date_separator: '%s'),
-                  "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+      <%= raw sprintf(f.date_select(:day,class:'select-day',id:"birth-date",use_month_numbers: true,prompt:"--",start_year: (Time.now.year),end_year: (Time.now.year + 5),date_separator: '%s'),"<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
     </div>
 </div>
 曜日を入力してください
