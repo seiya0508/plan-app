@@ -2,40 +2,36 @@
     <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
      <%= render 'layouts/error_messages', model: f.object %>
     <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
-    予定名：Name
-    <div>
-<%= f.text_area :name, placeholder: "必須入力"%>
-</div>
 
 予定日を入力してください
 <div>
     </div>
     <div class='input-birth-wrap'> 
-      <%= raw sprintf(
-                  f.date_select(
-                    :day,
-                    class:'select-day',
-                    id:"birth-date",#DB保存
-                    use_month_numbers: true,
-                    prompt:"--",
-                    start_year: (Time.now.year),
-                    end_year: (Time.now.year + 5),
-                    date_separator: '%s'),
-                  "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+      <%= raw sprintf(f.date_select(:day,class:'select-day',id:"birth-date",use_month_numbers: true,prompt:"--",start_year: (Time.now.year),end_year: (Time.now.year + 5),date_separator: '%s'),"<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
     </div>
 </div>
 曜日を入力してください
 <div>
- <%= f.select :dow, [["月曜", "月曜"], ["火曜", "火曜"], ["水曜", "水曜"], ["木曜", "木曜"],["金曜", "金曜"], ["土曜", "土曜"], ["日曜", "日曜"]], include_blank: "--" %>
+ <%= f.select :dow, [["日曜", 0],["月曜", 1], ["火曜", 2], ["水曜", 3], ["木曜", 4],["金曜", 5], ["土曜", 6]], include_blank: "必須入力" %>
  </div>
 ゴミの種類を入力してください
 <div>
- <%= f.select :category, [["可燃ごみ", "可燃ごみ"], ["不燃ごみ", "不燃ごみ"], ["缶", "缶"], ["ペットボトル", "ペットボトル"], ["粗大ゴミ", "粗大ゴミ"], ["ダンボール・新聞紙", "ダンボール・新聞紙"]], include_blank: "--" %>
+ <%= f.select :category, [["可燃ごみ", "可燃ごみ"], ["不燃ごみ", "不燃ごみ"], ["缶", "缶"], ["ペットボトル", "ペットボトル"], ["粗大ごみ", "粗大ごみ"], ["ダンボール・新聞紙", "ダンボール・新聞紙"],["プラスチック", "プラスチック"]], include_blank: "--" %>
 </div>
+name
+<div>
+<%= f.text_area :name, placeholder: "当番者ネーム"%>
+</div>    
 その他
 <div>
 <%= f.text_area :other, placeholder: "その他入力"%>
 </div>
+期間の開始日
+<%= f.datetime_select :start_at, :use_month_numbers => true %>
+<div>
+期間の終了日
+<%= f.datetime_select :end_at, :use_month_numbers => true %>
+<div>
 <div>
 <%= f.submit "編集を実行" %>
 </div>       

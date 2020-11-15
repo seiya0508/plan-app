@@ -18,5 +18,6 @@ module PlanApp
     
     # 日本語の言語設定
    config.i18n.default_locale = :ja
+   config.time_zone = 'Asia/Tokyo'
   end
 end

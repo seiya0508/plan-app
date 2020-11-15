@@ -1,6 +1,6 @@
 class GarbagesController < ApplicationController
   def index
-    @garbage = Garbage.where(day: Date.today)
+    @garbage = Garbage.where(dow: Date.today.wday)
   end
 
   def new

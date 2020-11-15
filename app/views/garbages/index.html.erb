@@ -24,20 +24,23 @@
 <% @garbage.each do |garbage| %>
 
 <li class='list'>
-<%= link_to garbage.name, edit_garbage_path(garbage.id) %>
+<% dow = %w[日曜日 月曜日 火曜日 水曜日 木曜日 金曜日 土曜日 日曜日] %>
+<%= link_to dow[Date.today.wday], edit_garbage_path(garbage.id)  %>
+</li>
+
+<li class='list'>
+<%= garbage.category %>
+</li>
+
+<li class='list'>
+<%= garbage.name%>
 </li>
 
 <li class='list'>
 <%= garbage.day %>
 </li>
 
-<li class='list'>
-<%= garbage.dow %>
-</li>
 
-<li class='list'>
-<%= garbage.category %>
-</li>
 
 <li class='list'>
 <%= garbage.other %>
