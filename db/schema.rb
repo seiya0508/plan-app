@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2020_11_08_021554) do
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "url_path"
     t.string "full_name", null: false
     t.string "nick_name", null: false
     t.string "email", default: "", null: false
