@@ -60,7 +60,7 @@ nav li:last-child{
 
 nav li:hover{
   background-color: orange;
-  transition: background-color 0.5s ease-out;
+  transition: 0.5s ease-out;
   color: #fff;
 }
 
@@ -81,4 +81,5 @@ nav a{
     font-weight: 550;   /*文字の太さを調整*/
     line-height: 35px;  /*行間の指定（ナビボタンの高さ指定）*/
     margin-left: 1%;
+    list-style: none;
   }

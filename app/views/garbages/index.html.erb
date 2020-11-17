@@ -11,7 +11,7 @@
 <nav>
   <ul>
     <li><%= link_to "新規スケジュール", new_garbage_path %></li>
-    <li><%= link_to "スケジュール一覧", new_garbage_path %></li>
+    <li><%= link_to "スケジュール一覧", garbage_path(current_user) %></li>
     <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
     <li><%= link_to "ごみマニュアル", "https://www.city.kawaguchi.lg.jp/soshiki/01100/040/4/1/1946.html", target: :_blank, rel: "noopener noreferrer" %></li>
   </ul>
@@ -24,8 +24,8 @@
 <% @garbage.each do |garbage| %>
 
 <li class='list'>
-<% dow = %w[日曜日 月曜日 火曜日 水曜日 木曜日 金曜日 土曜日 日曜日] %>
-<%= link_to dow[Date.today.wday], edit_garbage_path(garbage.id)  %>
+<% dow = %w[日曜日 月曜日 火曜日 水曜日 木曜日 金曜日 土曜日] %>
+<%= link_to dow[Date.today.wday], edit_garbage_path(garbage.id) %>
 </li>
 
 <li class='list'>
@@ -39,8 +39,6 @@
 <li class='list'>
 <%= garbage.day %>
 </li>
-
-
 
 <li class='list'>
 <%= garbage.other %>

@@ -30,9 +30,13 @@ class GarbagesController < ApplicationController
 end
 
   def destroy
-    @garbage = Garbage.find(params[:id])
-    @garbage.destroy
+    garbage = Garbage.find(params[:id])
+    garbage.destroy
     redirect_to root_path
+  end
+
+  def show
+    @garbage = Garbage.all.order(dow: "ASC")
   end
 
   private

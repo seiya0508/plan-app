@@ -1,0 +1,15 @@
+<h1>showページ<h1>
+
+<% @garbage.each do |garbage| %>
+
+<li class='list'>
+<%= link_to garbage.dow, edit_garbage_path(garbage.id) %>
+</li>
+<% end %>
+
+
+
+
+<%= link_to root_path do %>
+  <button>戻る</button>
+<% end %>
