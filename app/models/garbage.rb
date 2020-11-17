@@ -1,3 +1,3 @@
 class Garbage < ApplicationRecord
-  validates :name, presence: true
+  validates :dow, presence: true
 end

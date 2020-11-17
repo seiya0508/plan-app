@@ -19,7 +19,7 @@
 | Colum           | type      | Options     |
 | --------------  | ------    | ----------- |
 | day             | date      |             |
-| dow             | string    |             |
+| dow             | integer   |             |
 | category        | string    |             |
 | other           | string    |             |
 | name            | string    | null: false |

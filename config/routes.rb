@@ -3,5 +3,5 @@ Rails.application.routes.draw do
     get "/users/sign_out"
   end
   root to: "garbages#index"
-  resources :garbages, only: [:new, :create, :edit, :update, :destroy]
+  resources :garbages, only: [:new, :create, :edit, :update, :destroy, :show]
 end
