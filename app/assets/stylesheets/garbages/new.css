@@ -2,6 +2,16 @@
 .input-birth-wrap {
   display: flex;
   flex-wrap: wrap;
+  padding-left: 10px;
+}
+
+.s{
+  padding-left: 10px;
+  margin-top: 5px;
+}
+
+#y p{
+  padding-left: 10px;
 }
   /*
 .input-birth-wrap>select {
