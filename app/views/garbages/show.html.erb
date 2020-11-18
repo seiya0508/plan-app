@@ -1,14 +1,10 @@
 <h1>showページ<h1>
-
 <% @garbage.each do |garbage| %>
-
 <li class='list'>
+<% dow = %w[日曜日 月曜日 火曜日 水曜日 木曜日 金曜日 土曜日] %>
 <%= link_to garbage.dow, edit_garbage_path(garbage.id) %>
-</li>
 <% end %>
-
-
-
+</li>
 
 <%= link_to root_path do %>
   <button>戻る</button>

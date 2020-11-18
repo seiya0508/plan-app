@@ -1,4 +1,4 @@
-<h1>editページ</h1>
+<h1>編集ページ</h1>
 
 <%= render partial: "form", locals: { garbage: @garbage } %>
 <div class="s">
@@ -10,3 +10,6 @@
 <%= link_to root_path do %>
   <button>Topページへ</button>
 <% end %>
+<div id="y">   
+<%= link_to "スケジュール一覧へ戻る", garbage_path(current_user) %>
+</div>

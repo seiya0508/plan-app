@@ -23,11 +23,11 @@ class GarbagesController < ApplicationController
   def update
     @garbage = Garbage.find(params[:id])
     if @garbage.update(garbage_params)
-       redirect_to root_path
+      redirect_to root_path
     else
       render :edit
+    end
   end
-end
 
   def destroy
     garbage = Garbage.find(params[:id])
@@ -35,8 +35,8 @@ end
     redirect_to root_path
   end
 
-  def show
-    @garbage = Garbage.all.order(dow: "ASC")
+  def show  
+    @garbage = Garbage.all.order(dow: 'ASC')      
   end
 
   private
@@ -44,5 +44,4 @@ end
   def garbage_params
     params.require(:garbage).permit(:day, :dow, :category, :other, :name)
   end
-
 end
