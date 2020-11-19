@@ -16,7 +16,6 @@ RSpec.describe "User", type: :system do
       fill_in 'user[password]', with: @user.password
       fill_in 'user[password_confirmation]', with: @user.password_confirmation
       #登録するボタンを押すとユーザーモデルのカウントが1上がる
-      #binding.pry
       expect{
         find('input[name="commit"]').click
       }.to change { User.count }.by(1)      
@@ -31,7 +30,6 @@ RSpec.describe "User", type: :system do
       expect(page).to have_content('ログアウト')
       #ログアウトボタンを押すと、会員登録、ログイン選択画面に遷移
       click_on "ログアウト"
-      #binding.pry
       #ログインボタンをclicしてログイン画面に遷移
       click_on "ログイン"
       #ユーザー情報を入力する
@@ -39,6 +37,31 @@ RSpec.describe "User", type: :system do
       fill_in 'user[password]', with: @user.password
       #indexページへ遷移する
       click_on "ログイン"
+    end
+  end
+  context "会員登録ができないとき" do
+    it '誤った情報ではユーザー会員登録ができずに会員登録ページへ戻ってくる' do
+      #会員登録ページに移動する
+      visit new_user_registration_path
+            #ユーザー情報を入力する
+            fill_in "user[nick_name]", with: nil
+            fill_in 'user[full_name]', with: nil
+            fill_in 'user[email]', with: nil
+            fill_in 'user[password]', with: nil
+            fill_in 'user[password_confirmation]', with: nil
+      #登録するボタンを押すとユーザーモデルのカウントは上がらない
+      expect{
+        find('input[name="commit"]').click
+      }.to change { User.count }.by(0)
+      #会員登録、ログイン選択画面に遷移
+      visit root_path
+      #ログインボタンをclicしてログイン画面に遷移
+      click_on "ログイン"
+      #ユーザー情報を入力する
+      fill_in 'user[email]', with: nil
+      fill_in 'user[password]', with: nil
+      #ログインボタンをclicしてログイン画面に遷移
+      click_on "ログイン"                 
       binding.pry
     end
   end
