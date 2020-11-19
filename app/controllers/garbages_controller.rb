@@ -35,13 +35,13 @@ class GarbagesController < ApplicationController
     redirect_to root_path
   end
 
-  def show  
+  def show
     @garbage = Garbage.all.order(dow: 'ASC')      
   end
 
   private
 
   def garbage_params
-    params.require(:garbage).permit(:day, :dow, :category, :other, :name)
+    params.require(:garbage).permit(:day, :dow, :category, :other, :title)
   end
 end

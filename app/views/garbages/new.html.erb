@@ -26,10 +26,10 @@
  <%= f.select :category, [["可燃ごみ", "可燃ごみ"], ["不燃ごみ", "不燃ごみ"], ["缶・ビン", "缶・ビン"], ["ペットボトル・繊維類", "ペットボトル・繊維類"], ["金属・紙類", "金属・紙類"],["プラスチック", "プラスチック"],["その他", "その他"]], include_blank: "--" %>
 </div>
 <div id="y">    
-<p>name</p>
+<p>タイトル</p>
 </div>
 <div class="s">
-<%= f.text_area :name, placeholder: "当番者ネーム"%>
+<%= f.text_area :title, placeholder: "必須入力"%>
 </div>
 <div id="y">    
 <p>その他</p>
