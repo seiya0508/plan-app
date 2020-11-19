@@ -17,12 +17,12 @@ RSpec.describe User, type: :model do
 
     context '新規登録がうまくいかないとき' do
       it 'nick_nameが空だと登録できない' do
-        @user.nick_name = ''
+        @user.nick_name = nil
         @user.valid?
         expect(@user.errors.full_messages).to include("Nick nameを入力してください")
       end
       it 'full_nameが空だと登録できない' do
-        @user.full_name = ''
+        @user.full_name = nil
         @user.valid?
         expect(@user.errors.full_messages).to include("Full nameを入力してください")
       end
@@ -32,12 +32,12 @@ RSpec.describe User, type: :model do
         expect(@user.errors.full_messages).to include("Eメールを入力してください")
       end
       it 'passwordが空では登録できない' do
-        @user.password = ''
+        @user.password = nil
         @user.valid?
         expect(@user.errors.full_messages).to include("パスワードを入力してください")
       end
       it 'passwordが存在してもpassword_confirmationが空では登録できない' do
-        @user.password_confirmation = ''
+        @user.password_confirmation = nil
         @user.valid?
         expect(@user.errors.full_messages).to include("パスワード（確認用）とパスワードの入力が一致しません")
       end
