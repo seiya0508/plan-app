@@ -72,6 +72,7 @@ nav a{
   letter-spacing: 5px;    /*文字と文字の間隔をあける*/
   font-weight: 600;   /*文字の太さを調整*/
   line-height: 45px;  /*行間の指定（ナビボタンの高さ指定）*/
+  list-style: none;
 }
 
   .list{
