@@ -6,6 +6,7 @@ class CreateGarbages < ActiveRecord::Migration[6.0]
       t.string :other
       t.integer :dow
       t.string :title
+      t.references :user, foreign_key: true
       t.timestamps
     end
   end
