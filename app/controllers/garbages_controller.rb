@@ -1,4 +1,5 @@
 class GarbagesController < ApplicationController
+  before_action :move_to_index,only: [:show, :new, :edit]
   def index
     @garbage = Garbage.where(dow: Date.today.wday)
   end
@@ -40,7 +41,12 @@ class GarbagesController < ApplicationController
   end
 
   private
+  def move_to_index
+    unless user_signed_in?
+      redirect_to action: :index
+    end
 
+  end
   def garbage_params
     params.require(:garbage).permit(:day, :dow, :category, :other, :title).merge(user_id: current_user.id)
   end
