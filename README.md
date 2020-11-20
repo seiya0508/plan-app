@@ -16,14 +16,14 @@
 
 ## garbages テーブル
 
-| Colum           | type      | Options     |
-| --------------  | ------    | ----------- |
-| day             | date      |             |
-| dow             | integer   |             |
-| category        | string    |             |
-| other           | string    |             |
-| title           | string    | null: false |
-
+| Colum           | type       | Options           |
+| --------------  | ------     | -----------       |
+| day             | date       |                   |
+| dow             | integer    |                   |
+| category        | string     |                   |
+| other           | string     |                   |
+| title           | string     | null: false       |
+| user            | references | foreign_key: true |
 ### Association
 
 belongs_to :user

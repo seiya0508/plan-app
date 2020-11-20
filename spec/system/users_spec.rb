@@ -62,7 +62,6 @@ RSpec.describe "User", type: :system do
       fill_in 'user[password]', with: nil
       #ログインボタンをclicしてログイン画面に遷移
       click_on "ログイン"                 
-      binding.pry
     end
   end
 end

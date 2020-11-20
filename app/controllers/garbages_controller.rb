@@ -42,6 +42,6 @@ class GarbagesController < ApplicationController
   private
 
   def garbage_params
-    params.require(:garbage).permit(:day, :dow, :category, :other, :title)
+    params.require(:garbage).permit(:day, :dow, :category, :other, :title).merge(user_id: current_user.id)
   end
 end
