@@ -33,7 +33,7 @@ class GarbagesController < ApplicationController
   def destroy
     garbage = Garbage.find(params[:id])
     garbage.destroy
-    redirect_to root_path
+    redirect_to garbage_path(current_user)
   end
 
   def show

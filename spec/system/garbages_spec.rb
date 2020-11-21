@@ -28,7 +28,7 @@ RSpec.describe 'Garbages', type: :system do
       click_on 'スケジュール一覧'
       #編集ページへ移動
       click_on 'タイトル'
-      #予定を削除し、Topページへ移動する
+      #予定を削除し、スケジュール一覧ページへ移動
       click_button '予定を削除'
       #binding.pry
     end
