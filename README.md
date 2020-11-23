@@ -74,5 +74,5 @@ VSCode
 
 belongs_to :user
 
-
-![Video in Imgur ](https://i.gyazo.com/5cc09294f97f9f4054590ce698ed1fd4.mp4)
+# DEMO
+![Video in Imgur ](hhttps://gyazo.com/b2e6e6e5554092b9f8af0a4c46ecb339)
