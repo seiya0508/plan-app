@@ -1,3 +1,5 @@
+# README
+
 # アプリ名
 -plan-app
 
@@ -31,8 +33,18 @@ https://plan-app-0508.herokuapp.com/
 - web内からユーザーの住まいのゴミ捨てマニュアルlinkに移動できたら便利
 
 # 使用技術(開発環境)
+### バックエンド
+Ruby,Ruby on Rails
+### フロントエンド
+HTML,CSS
+### データベース
+MySQL,SequelPro
+### テスト
+RSpeck
+### エディタ
+VSCode
 
-# README
+# DB設計
 
 ## users テーブル
 
