@@ -1,10 +1,12 @@
-# README
-
 # アプリ名
 ## plan-app
 
 # 概要
-『ゴミ捨て管理アプリ』です。当日のゴミ捨て予定をTopページにお知らせ表示する機能となります。
+###『ゴミ捨て管理アプリ』です。当日のゴミ捨て予定をTopページにお知らせ表示する機能となります。
+
+# DEMO
+[![Image from Gyazo](https://i.gyazo.com/ea264073ed7740270ebc57574d88fa77.gif)](https://gyazo.com/ea264073ed7740270ebc57574d88fa77)
+[![Image from Gyazo](https://i.gyazo.com/848026d531c86d2647ab1a9440eb4716.gif)](https://gyazo.com/848026d531c86d2647ab1a9440eb4716)
 
 # 本番環境
 https://plan-app-0508.herokuapp.com/
@@ -72,7 +74,5 @@ VSCode
 | user            | references | foreign_key: true |
 ### Association
 
-belongs_to :user
+- belongs_to :user
 
-# DEMO
-[![Image from Gyazo](https://i.gyazo.com/a8c9e9a8bcb3bd3e8f5bca6b948d57f1.gif)](https://gyazo.com/a8c9e9a8bcb3bd3e8f5bca6b948d57f1)
