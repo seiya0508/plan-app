@@ -6,7 +6,8 @@
 
 # DEMO
 [![Image from Gyazo](https://i.gyazo.com/ea264073ed7740270ebc57574d88fa77.gif)](https://gyazo.com/ea264073ed7740270ebc57574d88fa77)
-[![Image from Gyazo](https://i.gyazo.com/848026d531c86d2647ab1a9440eb4716.gif)](https://gyazo.com/848026d531c86d2647ab1a9440eb4716)
+
+[![Image from Gyazo](https://i.gyazo.com/2292b5a11062ad0a339d83940c4b1077.gif)](https://gyazo.com/2292b5a11062ad0a339d83940c4b1077)
 
 # 本番環境
 https://plan-app-0508.herokuapp.com/
