@@ -1,3 +1,18 @@
+# アプリ名
+- plan-app
+
+# 概要
+- 『ゴミ捨て管理アプリ』です。当日のゴミ捨て予定をTopページに表示するアプリです。
+
+# 本番環境
+- https://plan-app-0508.herokuapp.com/
+ログイン情報
+- Eメール:test@com.1
+- パシワード:11111a
+
+# 制作背景
+
+
 # README
 
 ## users テーブル
@@ -11,7 +26,7 @@
 
 ### Association
 
-- has_many :schedules
+- has_many :garbages
 
 
 ## garbages テーブル
