@@ -76,3 +76,4 @@ belongs_to :user
 
 https://gyazo.com/5cc09294f97f9f4054590ce698ed1fd4
 
+https://i.gyazo.com/5cc09294f97f9f4054590ce698ed1fd4.mp4
