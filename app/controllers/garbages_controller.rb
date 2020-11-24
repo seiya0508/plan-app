@@ -1,5 +1,6 @@
 class GarbagesController < ApplicationController
-  before_action :move_to_index,only: [:show, :new, :edit]
+  before_action :move_to_index, only: [:show, :new, :edit]
+  before_action :set_garbage, only: [:edit, :update]
   def index
     @garbage = Garbage.where(dow: Date.today.wday)
   end
@@ -18,11 +19,9 @@ class GarbagesController < ApplicationController
   end
 
   def edit
-    @garbage = Garbage.find(params[:id])
   end
 
   def update
-    @garbage = Garbage.find(params[:id])
     if @garbage.update(garbage_params)
       redirect_to root_path
     else
@@ -37,16 +36,19 @@ class GarbagesController < ApplicationController
   end
 
   def show
-    @garbage = Garbage.all.order(dow: 'ASC')      
+    @garbage = Garbage.all.order(dow: 'ASC')
   end
 
   private
-  def move_to_index
-    unless user_signed_in?
-      redirect_to action: :index
-    end
 
+  def move_to_index
+    redirect_to action: :index unless user_signed_in?
   end
+
+  def set_garbage
+    @garbage = Garbage.find(params[:id])
+  end
+
   def garbage_params
     params.require(:garbage).permit(:day, :dow, :category, :other, :title).merge(user_id: current_user.id)
   end

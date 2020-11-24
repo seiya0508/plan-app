@@ -7,12 +7,9 @@
 <div id="y">    
 <p>予定日を入力してください</p>
 </div>
-<div>
+    <div class='input-day-wrap'> 
+      <%= raw sprintf(f.date_select(:day,use_month_numbers: true,prompt:"--",start_year: (Time.now.year),end_year: (Time.now.year + 5),date_separator: '%s'),"<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
     </div>
-    <div class='input-birth-wrap'> 
-      <%= raw sprintf(f.date_select(:day,class:'select-day',id:"birth-date",use_month_numbers: true,prompt:"--",start_year: (Time.now.year),end_year: (Time.now.year + 5),date_separator: '%s'),"<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
-    </div>
-</div>
 <div id="y">    
 <p>曜日を入力してください</p>
 </div>

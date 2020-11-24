@@ -10,20 +10,19 @@ RSpec.describe Garbage, type: :model do
         expect(@garbage).to be_valid
       end
 
-    context '新規登録がうまくいかないとき' do
-      it 'dowが空だと登録できない' do
-        @garbage.dow = nil
-        @garbage.valid?
-        expect(@garbage.errors.full_messages).to include("Dowを入力してください")
-      end
-    
-      it 'titleが空だと登録できない' do
-        @garbage.title = nil
-        @garbage.valid?
-        expect(@garbage.errors.full_messages).to include("Titleを入力してください")
-      end
+      context '新規登録がうまくいかないとき' do
+        it 'dowが空だと登録できない' do
+          @garbage.dow = nil
+          @garbage.valid?
+          expect(@garbage.errors.full_messages).to include('Dowを入力してください')
+        end
 
-     end
+        it 'titleが空だと登録できない' do
+          @garbage.title = nil
+          @garbage.valid?
+          expect(@garbage.errors.full_messages).to include('Titleを入力してください')
+        end
+      end
     end
   end
 end

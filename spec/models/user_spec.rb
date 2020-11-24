@@ -19,33 +19,33 @@ RSpec.describe User, type: :model do
       it 'nick_nameが空だと登録できない' do
         @user.nick_name = nil
         @user.valid?
-        expect(@user.errors.full_messages).to include("Nick nameを入力してください")
+        expect(@user.errors.full_messages).to include('Nick nameを入力してください')
       end
       it 'full_nameが空だと登録できない' do
         @user.full_name = nil
         @user.valid?
-        expect(@user.errors.full_messages).to include("Full nameを入力してください")
+        expect(@user.errors.full_messages).to include('Full nameを入力してください')
       end
       it 'emailが空では登録できない' do
         @user.email = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("Eメールを入力してください")
+        expect(@user.errors.full_messages).to include('Eメールを入力してください')
       end
       it 'passwordが空では登録できない' do
         @user.password = nil
         @user.valid?
-        expect(@user.errors.full_messages).to include("パスワードを入力してください")
+        expect(@user.errors.full_messages).to include('パスワードを入力してください')
       end
       it 'passwordが存在してもpassword_confirmationが空では登録できない' do
         @user.password_confirmation = nil
         @user.valid?
-        expect(@user.errors.full_messages).to include("パスワード（確認用）とパスワードの入力が一致しません")
+        expect(@user.errors.full_messages).to include('パスワード（確認用）とパスワードの入力が一致しません')
       end
       it 'passwordが5文字以下であれば登録できない' do
         @user.password = '00000'
         @user.password_confirmation = '00000'
         @user.valid?
-        expect(@user.errors.full_messages).to include("パスワードは6文字以上で入力してください")
+        expect(@user.errors.full_messages).to include('パスワードは6文字以上で入力してください')
       end
       it '重複したemailが存在する場合登録できない' do
         @user.save
