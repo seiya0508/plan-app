@@ -65,3 +65,5 @@ gem 'devise'
 gem 'rails-i18n'
 
 gem 'pry-rails'
+
+gem 'whenever', require: false
