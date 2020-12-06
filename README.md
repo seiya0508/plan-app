@@ -5,9 +5,8 @@
 『ゴミ捨て管理アプリ』です。当日のゴミ捨て予定をTopページにお知らせ表示する機能となります。
 
 # DEMO
-[![Image from Gyazo](https://i.gyazo.com/ea264073ed7740270ebc57574d88fa77.gif)](https://gyazo.com/ea264073ed7740270ebc57574d88fa77)
+[![Image from Gyazo](https://i.gyazo.com/f35ea9e8f98a421f1fddc7935bfce1ce.gif)](https://gyazo.com/f35ea9e8f98a421f1fddc7935bfce1ce)
 
-[![Image from Gyazo](https://i.gyazo.com/2292b5a11062ad0a339d83940c4b1077.gif)](https://gyazo.com/2292b5a11062ad0a339d83940c4b1077)
 
 # 本番環境
 https://plan-app-0508.herokuapp.com/
